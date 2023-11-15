@@ -1,0 +1,241 @@
+html {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Amatic SC", cursive, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Container for ALL page content, including header and footer */
+#wrapper {
+  position: relative;
+  min-height: 100vh;
+}
+
+/* Container for page content BETWEEN the header and footer */
+#page-wrapper {
+  padding-bottom: 3%;
+}
+
+header {
+  height: 10vh;
+background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  box-shadow: 0 5px 7px rgba(0, 0, 0, 0.4);
+}
+
+/* Logo image in the header */
+header img {
+  width: 45px;
+}
+
+ul {
+  text-align: center;
+  margin-right: 2rem;
+}
+
+li {
+  color: #ffffff;
+  display: inline-block;
+  margin: 0 0 0 20px;
+  cursor: pointer;
+  font-size: 2em;
+  font-weight: 700;
+  transition: 0.3s ease;
+}
+
+li:hover,
+li:active {
+color: rgb(255, 255, 255);
+}
+
+div.banner {
+  height: 45vh;
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+  text-align: center;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.8);
+}
+
+#home-banner {
+background-image: url('https://c4.wallpaperflare.com/wallpaper/720/877/295/aston-martin-showroom-hd-wallpaper-preview.jpg');
+}
+
+#about-banner {
+background-image: url('https://c4.wallpaperflare.com/wallpaper/323/372/925/lamborghini-car-lamborghini-aventador-vehicle-wallpaper-preview.jpg');
+}
+
+#services-banner {
+background-image: url('https://wallpapers.com/images/featured/cool-sports-car-uapjodum02hvtrgb.jpg');
+}
+
+#contact-banner {
+background-image: url('https://c4.wallpaperflare.com/wallpaper/1022/53/128/ultra-wide-car-nissan-skyline-gt-r-wallpaper-preview.jpg');
+}
+
+/* <h1> element on the Home page banner */
+.banner h1 {
+  margin: 0;
+  font-size: 65px;
+}
+
+/* <h2> element on the Home page banner only */
+#home-banner h2 {
+  font-size: 42px;
+}
+
+/* <h2> elements in the page banners */
+.banner h2 {
+  font-size: 60px;
+  margin: 10px 0 0;
+}
+
+/* <h3> elements in the page banners */
+.banner h3 {
+  font-size: 40px;
+  margin-top: -5px;
+}
+
+h2 {
+  font-size: 3em;
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  font-size: 18px;
+  font-family: "Work Sans", sans-serif;
+}
+
+h4 {
+  font-family: "Work Sans", sans-serif;
+  line-height: 0.5;
+}
+
+/* Font Awesome icons in the Contact page */
+h4::before {
+  font-family: "Font Awesome 5 Free";
+  margin-right: 10px;
+  color: #000000; 
+}
+
+h4#email-info::before {
+  content: "\f0e0";
+}
+
+h4#phone-info::before {
+  content: "\f095";
+}
+
+h4#address-info::before {
+  content: "\f3c5";
+}
+
+div.row {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 0 3% 3% 3%;
+  margin-bottom: 1%;
+}
+
+/* Images on the Home and "What We Do" pages */
+section img {
+  width: 100%;
+  object-fit: contain;
+}
+
+section.text-col {
+  flex: 2 1 0;
+  padding: 2% 3%;
+}
+
+section.img-col {
+  flex: 1 1 0;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+/* Container for the text in the "About Us" and "Contact Us" pages */
+.text-wrapper {
+  display: grid;
+  grid-template-columns: 1fr min(100ch, 100%) 1fr;
+  padding: 3%;
+}
+
+.text-wrapper>* {
+  grid-column: 2;
+}
+
+footer {
+background-color: lightskyblue;
+width: 100%;
+height: 4vh;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Footer text */
+footer p {
+  font-size: 14px;
+  color: #ffffff;
+}
+
+
+/* Media queries for mobile view */
+
+@media (max-width: 767.98px) {
+  #header img {
+      width: 50px;
+  }
+  li {
+      font-size: 1.5em;
+  }
+}
+
+@media (max-width: 414px) {
+  .banner h1 {
+      font-size: 2em;
+  }
+  #home-banner h2 {
+      font-size: 1.5em;
+  }
+  .row {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+  }
+  .row img {
+      width: 70%;
+  }
+  
+  section {
+    margin-bottom: 5%;
+  }
+  
+  footer p {
+      font-size: 0.75em;
+  }
+}
+     
